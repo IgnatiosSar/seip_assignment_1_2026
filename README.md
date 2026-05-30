@@ -37,13 +37,13 @@ kubectl apply -f secret.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 ```
-Note: The order between configmap and secret doesn't matter
-## Interacting with the endpoints
-Because the service type is set to ClusterIP, in order to access the endpoints you must first map the ClusterIP service to your localhost
+Note: The order between configmap and secret doesn't matter.
+## Interacting with the Endpoints
+Because the service type is set to ClusterIP, in order to access the endpoints you must first map the ClusterIP service to your localhost:
 ```bash
 kubectl port-forward service/echo-api-service 8080:80
 ```
-Now you can interact with the following endpoints using your browser or using curl
+Now you can interact with the following endpoints using your browser or using curl:
 * Main endpoint: http://localhost:8080/
 * Secure endpoint: http://localhost:8080/secure-config
 * Health check endpoint: http://localhost:8080/health
