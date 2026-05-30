@@ -16,6 +16,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Image
-        run: docker build . -t ghcr.io/IgnatiosSar/echo-api:latest
+        run: docker build . -t ghcr.io/ignatiossar/echo-api:latest
       - name: Push Image
-        run: docker push ghcr.io/IgnatiosSar/echo-api:latest
+        run: docker push ghcr.io/ignatiossar/echo-api:latest
